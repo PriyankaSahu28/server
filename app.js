@@ -8,9 +8,9 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + '/index.html');
-//   });
+ app.get('/', (req, res) => {
+     res.sendFile(__dirname + '/index.html');
+   });
 
 var server = app.listen(8000,()=>{
     console.log('Server is running on port number 8000')
